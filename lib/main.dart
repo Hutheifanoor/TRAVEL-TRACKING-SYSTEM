@@ -4,17 +4,17 @@ import 'package:flutter_application_1/views/login.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
-  runApp(GradingApp());
+  runApp(TravelBucketlistApp());
 }
 
-class GradingApp extends StatefulWidget {
-  const GradingApp({super.key});
+class TravelBucketlistApp extends StatefulWidget {
+  const TravelBucketlistApp({super.key});
 
   @override
-  State<GradingApp> createState() => _GradingAppState();
+  State<TravelBucketlistApp> createState() => _TravelBucketlistAppState();
 }
 
-class _GradingAppState extends State<GradingApp> {
+class _TravelBucketlistAppState extends State<TravelBucketlistApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(

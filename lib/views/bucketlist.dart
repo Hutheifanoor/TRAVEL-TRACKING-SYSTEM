@@ -10,6 +10,6 @@ class Bucketlist extends StatefulWidget {
 class _BucketlistState extends State<Bucketlist> {
   @override
   Widget build(BuildContext context) {
-    return const Text("Bucket List");
+    return const Text("Bucketlist");
   }
 }

@@ -15,7 +15,7 @@ class _SINGUPState extends State<SINGUP> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Registration"),
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.deepOrange,
         foregroundColor: Colors.white,
         centerTitle: true,
         actions: [
@@ -119,10 +119,13 @@ class _SINGUPState extends State<SINGUP> {
                   onPressed: () {
                     // Registration logic here
                   },
-                  color: Colors.cyan,
+                  color: Colors.deepOrange,
                   height: 50,
                   minWidth: 200,
-                  child: Text("Register"),
+                  child: Text(
+                    "Register",
+                    style: TextStyle(color: Colors.black, fontWeight: .bold),
+                  ),
                 ),
               ],
             ),
@@ -132,7 +135,7 @@ class _SINGUPState extends State<SINGUP> {
               children: [
                 Text(
                   "Already have an account? ",
-                  style: TextStyle(fontWeight: .w300, color: Colors.blueAccent),
+                  style: TextStyle(fontWeight: .bold, color: Colors.black),
                 ),
                 GestureDetector(
                   child: Text(

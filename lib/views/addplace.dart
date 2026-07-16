@@ -10,6 +10,6 @@ class Addplace extends StatefulWidget {
 class _AddplaceState extends State<Addplace> {
   @override
   Widget build(BuildContext context) {
-    return const Text("Add Place");
+    return const Text("addplace");
   }
 }

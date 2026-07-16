@@ -6,10 +6,10 @@ import 'package:flutter_application_1/views/dashboard.dart';
 import 'package:flutter_application_1/views/visitedplaces.dart';
 
 var screens = [
+  const Dashboard(),
   const Addplace(),
   const Bucketlist(),
   const Visitedplaces(),
-  const Dashboard(),
 ];
 int position = 0;
 
@@ -25,12 +25,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.deepOrange,
         items: <Widget>[
+          Icon(Icons.dashboard, size: 30),
           Icon(Icons.add, size: 30),
           Icon(Icons.list, size: 30),
-          Icon(Icons.search, size: 30),
-          Icon(Icons.dashboard, size: 30),
+          Icon(Icons.airlines, size: 30),
         ],
         onTap: (index) {
           setState(() {

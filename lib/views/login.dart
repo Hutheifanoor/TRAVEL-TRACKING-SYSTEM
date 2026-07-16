@@ -14,9 +14,9 @@ class _loginscreenState extends State<loginscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Grading Application"),
-        backgroundColor: Colors.cyan,
-        foregroundColor: Colors.white,
+        title: Text("Travel Bucket List app"),
+        backgroundColor: Colors.deepOrange,
+        foregroundColor: Colors.black,
         centerTitle: true,
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
@@ -34,10 +34,10 @@ class _loginscreenState extends State<loginscreen> {
               children: [Image.asset("WHATSAPP.png", width: 200, height: 200)],
             ),
             Text(
-              "Username:",
+              "USERNAME:",
               style: TextStyle(
                 fontSize: 16,
-                fontWeight: .w300,
+                fontWeight: .bold,
                 color: Colors.deepOrangeAccent,
               ),
             ),
@@ -49,7 +49,7 @@ class _loginscreenState extends State<loginscreen> {
             ),
             SizedBox(height: 20),
             Text(
-              "Password:",
+              "PASSWORD:",
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: .bold,
@@ -71,10 +71,13 @@ class _loginscreenState extends State<loginscreen> {
                   onPressed: () {
                     Get.toNamed("/home");
                   },
-                  color: Colors.cyan,
+                  color: Colors.deepOrange,
                   height: 50,
                   minWidth: 200,
-                  child: Text("Login"),
+                  child: Text(
+                    "Login",
+                    style: TextStyle(color: Colors.black, fontWeight: .bold),
+                  ),
                 ),
               ],
             ),
@@ -85,7 +88,7 @@ class _loginscreenState extends State<loginscreen> {
                 GestureDetector(
                   child: Text(
                     "Not registerd? Sign Up",
-                    style: TextStyle(color: Colors.blueAccent),
+                    style: TextStyle(color: Colors.black, fontWeight: .bold),
                   ),
                   onTap: () {
                     //code to navigate to SINGUP page
@@ -95,7 +98,7 @@ class _loginscreenState extends State<loginscreen> {
                 Spacer(),
                 Text(
                   "Forgot Password? Reset",
-                  style: TextStyle(color: Colors.blueAccent),
+                  style: TextStyle(color: Colors.black, fontWeight: .bold),
                 ),
               ],
             ),
