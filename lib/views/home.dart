@@ -24,13 +24,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: screens[position],
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.deepOrange,
         items: <Widget>[
           Icon(Icons.dashboard, size: 30),
           Icon(Icons.add, size: 30),
-          Icon(Icons.list, size: 30),
-          Icon(Icons.airlines, size: 30),
+          Icon(Icons.flight_takeoff, size: 30),
+          Icon(Icons.check_circle, size: 30),
         ],
         onTap: (index) {
           setState(() {
@@ -38,7 +39,6 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
       ),
-      body: screens[position],
     );
   }
 }

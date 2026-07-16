@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 
+// ignore: camel_case_types
 class loginscreen extends StatefulWidget {
   const loginscreen({super.key});
 
@@ -9,12 +10,18 @@ class loginscreen extends StatefulWidget {
   State<loginscreen> createState() => _loginscreenState();
 }
 
+// ignore: camel_case_types
 class _loginscreenState extends State<loginscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Travel Bucket List app"),
+        title: Text("TRAVEL TRACKING APP "),
+        titleTextStyle: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
         backgroundColor: Colors.deepOrange,
         foregroundColor: Colors.black,
         centerTitle: true,
@@ -75,8 +82,11 @@ class _loginscreenState extends State<loginscreen> {
                   height: 50,
                   minWidth: 200,
                   child: Text(
-                    "Login",
-                    style: TextStyle(color: Colors.black, fontWeight: .bold),
+                    "LOGIN",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ],
