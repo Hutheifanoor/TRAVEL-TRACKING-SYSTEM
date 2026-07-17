@@ -166,8 +166,6 @@ class _DashboardState extends State<Dashboard> {
             ),
 
             SizedBox(height: 10),
-
-            // List of Places - Using Container, Row, Text (from your login)
             Expanded(
               child: ListView.builder(
                 itemCount: places.length,
