@@ -16,7 +16,7 @@ class _DashboardState extends State<Dashboard> {
       "country": "FRANCE",
       "continent": "EUROPE",
       "countrycode": "FR",
-      "status": "Visited",
+      "status": "Bucket List",
       "image": "assets/eiffeltower.png",
     },
     {
@@ -24,7 +24,7 @@ class _DashboardState extends State<Dashboard> {
       "country": "CHINA",
       "continent": "ASIA",
       "countrycode": "CN",
-      "status": "Visited",
+      "status": "Visited Places",
       "image": "assets/greatwall.png",
     },
     {
@@ -32,7 +32,7 @@ class _DashboardState extends State<Dashboard> {
       "country": "ITALY",
       "continent": "EUROPE",
       "countrycode": "IT",
-      "status": "Bucket",
+      "status": "Bucket List",
       "image": "assets/colosseum.png",
     },
     {
@@ -40,7 +40,7 @@ class _DashboardState extends State<Dashboard> {
       "country": "USA",
       "continent": "NORTH AMERICA",
       "countrycode": "US",
-      "status": "Visited",
+      "status": "Visited Places",
       "image": "assets/statueofliberty.png",
     },
     {
@@ -48,7 +48,7 @@ class _DashboardState extends State<Dashboard> {
       "country": "INDIA",
       "continent": "ASIA",
       "countrycode": "IN",
-      "status": "Visited",
+      "status": "Visited Places",
       "image": "assets/tajmahal.png",
     },
     {
@@ -56,7 +56,7 @@ class _DashboardState extends State<Dashboard> {
       "country": "JAPAN",
       "continent": "ASIA",
       "countrycode": "JP",
-      "status": "Bucket",
+      "status": "Bucket List",
       "image": "assets/tokyotower.png",
     },
   ];
@@ -68,7 +68,7 @@ class _DashboardState extends State<Dashboard> {
     int bucketlistplaces = 0;
 
     for (var place in places) {
-      if (place['status'] == 'Visited') {
+      if (place['status'] == 'Visited Places') {
         visitedplaces++;
       } else {
         bucketlistplaces++;
@@ -109,12 +109,16 @@ class _DashboardState extends State<Dashboard> {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.blue,
+                        color: Colors.black,
                       ),
                     ),
                     Text(
-                      'Total',
-                      style: TextStyle(fontSize: 12, color: Colors.grey),
+                      'TOTAL',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.deepOrange,
+                      ),
                     ),
                   ],
                 ),
@@ -125,12 +129,16 @@ class _DashboardState extends State<Dashboard> {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.green,
+                        color: Colors.black,
                       ),
                     ),
                     Text(
-                      'Visited',
-                      style: TextStyle(fontSize: 12, color: Colors.grey),
+                      'VISITED PLACES',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.deepOrange,
+                      ),
                     ),
                   ],
                 ),
@@ -141,23 +149,26 @@ class _DashboardState extends State<Dashboard> {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.orange,
+                        color: Colors.black,
                       ),
                     ),
                     Text(
-                      'Bucket',
-                      style: TextStyle(fontSize: 12, color: Colors.grey),
+                      'BUCKET LIST',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.deepOrange,
+                      ),
                     ),
                   ],
                 ),
               ],
             ),
 
-            SizedBox(height: 20),
+            SizedBox(height: 22),
 
-            // Section Title
             Text(
-              "All Destinations:",
+              "ALL MY DESTINATIONS:",
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
@@ -165,21 +176,21 @@ class _DashboardState extends State<Dashboard> {
               ),
             ),
 
-            SizedBox(height: 10),
+            SizedBox(height: 4),
             Expanded(
               child: ListView.builder(
                 itemCount: places.length,
                 itemBuilder: (context, index) {
                   final place = places[index];
-                  bool isVisited = place['status'] == 'Visited';
+                  bool isVisited = place['status'] == 'Visited Places';
 
                   return Container(
-                    margin: EdgeInsets.only(bottom: 12),
+                    margin: EdgeInsets.only(bottom: 20),
                     padding: EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.deepOrange[100],
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Colors.grey.shade300),
+                      border: Border.all(color: Colors.deepOrange[100]!),
                     ),
                     child: Row(
                       children: [
@@ -187,12 +198,12 @@ class _DashboardState extends State<Dashboard> {
                           borderRadius: BorderRadius.circular(8),
                           child: Image.asset(
                             place['image']!,
-                            width: 50,
-                            height: 50,
+                            width: 100,
+                            height: 100,
                             fit: BoxFit.cover,
                           ),
                         ),
-                        SizedBox(width: 12),
+                        SizedBox(width: 4),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -200,29 +211,30 @@ class _DashboardState extends State<Dashboard> {
                               Text(
                                 place['name'] ?? '',
                                 style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.black,
                                 ),
                               ),
                               Text(
                                 place['country'] ?? '',
                                 style: TextStyle(
                                   fontSize: 14,
-                                  color: Colors.grey.shade600,
+                                  color: Colors.deepOrangeAccent,
                                 ),
                               ),
                               SizedBox(height: 4),
                               Container(
                                 padding: EdgeInsets.symmetric(
-                                  horizontal: 8,
-                                  vertical: 2,
+                                  horizontal: 4,
+                                  vertical: 4,
                                 ),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
                                   border: Border.all(
                                     color: isVisited
-                                        ? Colors.green.shade200
-                                        : Colors.blue.shade200,
+                                        ? Colors.green
+                                        : Colors.blue,
                                   ),
                                 ),
                                 child: Text(
@@ -230,8 +242,8 @@ class _DashboardState extends State<Dashboard> {
                                   style: TextStyle(
                                     fontSize: 10,
                                     color: isVisited
-                                        ? Colors.green.shade700
-                                        : Colors.blue.shade700,
+                                        ? Colors.green
+                                        : Colors.blue,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -242,13 +254,13 @@ class _DashboardState extends State<Dashboard> {
                         if (!isVisited)
                           Icon(
                             Icons.check_circle,
-                            color: Colors.green,
+                            color: Colors.black,
                             size: 28,
                           )
                         else
                           Icon(
                             Icons.flight_takeoff,
-                            color: Colors.green,
+                            color: Colors.black,
                             size: 28,
                           ),
                       ],
