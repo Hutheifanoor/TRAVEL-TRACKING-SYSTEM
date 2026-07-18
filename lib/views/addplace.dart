@@ -129,7 +129,7 @@ class _AddplaceState extends State<Addplace> {
               ),
             ),
             DropdownButtonFormField<String>(
-              value: _status,
+              initialValue: _status,
               items: _statusOptions.map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -155,15 +155,11 @@ class _AddplaceState extends State<Addplace> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text(
-                          '${_NameController.text} added to ${_status}!',
+                          '${_NameController.text} added to $_status!',
                         ),
                         backgroundColor: Colors.green,
                       ),
                     );
-                    _NameController.clear();
-                    _CountryController.clear();
-                    _ContinentController.clear();
-                    _CountryCodeController.clear();
                   },
                   color: Colors.deepOrange,
                   height: 50,
