@@ -14,9 +14,11 @@ class _SINGUPState extends State<SINGUP> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Registration"),
+        title: Text("REGISTRATION"),
+        titleTextStyle: TextStyle(fontSize: 20, fontWeight: .bold),
         backgroundColor: Colors.deepOrange,
-        foregroundColor: Colors.white,
+        foregroundColor: Colors.black,
+
         centerTitle: true,
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.settings)),

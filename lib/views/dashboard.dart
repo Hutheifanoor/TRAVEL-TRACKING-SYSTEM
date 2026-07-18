@@ -78,7 +78,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       appBar: AppBar(
         title: Text("DASHBOARD"),
-        titleTextStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+        titleTextStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         backgroundColor: Colors.deepOrange,
         foregroundColor: Colors.black,
         centerTitle: true,
