@@ -253,13 +253,13 @@ class _DashboardState extends State<Dashboard> {
                         ),
                         if (!isVisited)
                           Icon(
-                            Icons.check_circle,
+                            Icons.flight_takeoff,
                             color: Colors.black,
                             size: 28,
                           )
                         else
                           Icon(
-                            Icons.flight_takeoff,
+                            Icons.check_circle,
                             color: Colors.black,
                             size: 28,
                           ),

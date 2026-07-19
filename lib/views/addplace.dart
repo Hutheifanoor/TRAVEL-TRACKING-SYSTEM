@@ -138,7 +138,7 @@ class _AddplaceState extends State<Addplace> {
               }).toList(),
               onChanged: (String? newValue) {
                 setState(() {
-                  _status = newValue!;
+                  _status = newValue ?? "Bucket List";
                 });
               },
               decoration: InputDecoration(
@@ -175,31 +175,6 @@ class _AddplaceState extends State<Addplace> {
               ],
             ),
             SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Want to go back? ",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Get.toNamed("/home");
-                  },
-                  child: Text(
-                    "Dashboard",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent,
-                    ),
-                  ),
-                ),
-              ],
-            ),
           ],
         ),
       ),
