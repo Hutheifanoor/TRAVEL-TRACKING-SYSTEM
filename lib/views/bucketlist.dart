@@ -36,6 +36,7 @@ class _BucketlistState extends State<Bucketlist> {
       "image": "assets/tokyotower.png",
     },
   ];
+  @override
   Widget build(BuildContext context) {
     int totalBucket = bucketPlaces.length;
 
