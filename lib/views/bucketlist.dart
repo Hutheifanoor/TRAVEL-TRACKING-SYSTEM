@@ -85,6 +85,19 @@ class _BucketlistState extends State<Bucketlist> {
                     ),
                   ],
                 ),
+                Column(
+                  children: [
+                    Icon(Icons.star, size: 30, color: Colors.blue),
+                    Text(
+                      'DREAM',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.deepOrange,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
             SizedBox(height: 22),
