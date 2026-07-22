@@ -15,6 +15,7 @@ class _loginscreenState extends State<loginscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepOrangeAccent[300],
       appBar: AppBar(
         title: Text("TRAVEL TRACKING APP "),
         titleTextStyle: TextStyle(
@@ -32,26 +33,37 @@ class _loginscreenState extends State<loginscreen> {
       ),
 
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+        padding: const EdgeInsets.symmetric(horizontal: 30.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [Image.asset("WHATSAPP.png", width: 200, height: 200)],
+
+              children: [Image.asset("WHATSAPPP.png", width: 200, height: 200)],
             ),
+            SizedBox(height: 30),
             Text(
               "USERNAME:",
               style: TextStyle(
                 fontSize: 16,
-                fontWeight: .bold,
-                color: Colors.deepOrangeAccent,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepOrange,
               ),
             ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.person),
+            SizedBox(height: 4),
+            Center(
+              child: Container(
+                width: 300,
+
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.person),
+                    hintText: "Enter Your Name",
+                  ),
+                ),
               ),
             ),
             SizedBox(height: 20),
@@ -59,14 +71,21 @@ class _loginscreenState extends State<loginscreen> {
               "PASSWORD:",
               style: TextStyle(
                 fontSize: 16,
-                fontWeight: .bold,
-                color: Colors.deepOrangeAccent,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepOrange,
               ),
             ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.lock),
+            SizedBox(height: 4),
+            Center(
+              child: Container(
+                width: 300,
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.lock),
+                    hintText: "Enter Your Password",
+                  ),
+                ),
               ),
             ),
 
@@ -91,24 +110,37 @@ class _loginscreenState extends State<loginscreen> {
                 ),
               ],
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GestureDetector(
                   child: Text(
                     "Not registerd? Sign Up",
-                    style: TextStyle(color: Colors.black, fontWeight: .bold),
+                    style: TextStyle(
+                      color: Colors.deepOrange,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   onTap: () {
                     //code to navigate to SINGUP page
                     Get.toNamed("/signup");
                   },
                 ),
-                Spacer(),
-                Text(
-                  "Forgot Password? Reset",
-                  style: TextStyle(color: Colors.black, fontWeight: .bold),
+              ],
+            ),
+            SizedBox(height: 8),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                GestureDetector(
+                  child: Text(
+                    "Forgot Password? Reset",
+                    style: TextStyle(
+                      color: Colors.deepOrange,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ],
             ),

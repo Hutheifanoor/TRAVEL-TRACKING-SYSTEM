@@ -41,6 +41,7 @@ class _VisitedplacesState extends State<Visitedplaces> {
   Widget build(BuildContext context) {
     int totalVisited = visitedPlaces.length;
     return Scaffold(
+      backgroundColor: Colors.deepOrangeAccent[300],
       appBar: AppBar(
         title: Text("VISITED PLACES"),
         titleTextStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),

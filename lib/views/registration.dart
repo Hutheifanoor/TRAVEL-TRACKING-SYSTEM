@@ -13,6 +13,7 @@ class _SINGUPState extends State<SINGUP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepOrangeAccent[350],
       appBar: AppBar(
         title: Text("REGISTRATION"),
         titleTextStyle: TextStyle(fontSize: 20, fontWeight: .bold),
@@ -30,16 +31,18 @@ class _SINGUPState extends State<SINGUP> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [Image.asset("WHATSAPP.png", width: 200, height: 200)],
+              children: [Image.asset("WHATSAPPP.png", width: 200, height: 200)],
             ),
+            SizedBox(height: 20),
             Text(
               "Full Name:",
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: Colors.deepOrangeAccent,
+                color: Colors.deepOrange,
               ),
             ),
             TextField(
@@ -55,7 +58,7 @@ class _SINGUPState extends State<SINGUP> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: Colors.deepOrangeAccent,
+                color: Colors.deepOrange,
               ),
             ),
             TextField(
@@ -71,7 +74,7 @@ class _SINGUPState extends State<SINGUP> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: Colors.deepOrangeAccent,
+                color: Colors.deepOrange,
               ),
             ),
             TextField(
@@ -87,7 +90,7 @@ class _SINGUPState extends State<SINGUP> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: Colors.deepOrangeAccent,
+                color: Colors.deepOrange,
               ),
             ),
             TextField(
@@ -103,7 +106,7 @@ class _SINGUPState extends State<SINGUP> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: Colors.deepOrangeAccent,
+                color: Colors.deepOrange,
               ),
             ),
             TextField(
@@ -125,7 +128,7 @@ class _SINGUPState extends State<SINGUP> {
                   height: 50,
                   minWidth: 200,
                   child: Text(
-                    "Register",
+                    "REGISTER",
                     style: TextStyle(color: Colors.black, fontWeight: .bold),
                   ),
                 ),
@@ -145,7 +148,7 @@ class _SINGUPState extends State<SINGUP> {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: .bold,
-                      color: Colors.blueAccent,
+                      color: Colors.deepOrange,
                     ),
                   ),
                   onTap: () {
